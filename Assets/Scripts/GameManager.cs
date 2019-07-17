@@ -24,7 +24,6 @@ public class GameManager : MonoBehaviour
     public float MagnitudeSize;
     public float MagnitudeForce;
     public float ExplodeRadius;
-    public float ExplodeForce;
     
     
     public float WIDTH{
