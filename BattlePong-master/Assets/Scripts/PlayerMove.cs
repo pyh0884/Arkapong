@@ -37,7 +37,7 @@ public class PlayerMove : MonoBehaviour
 
     void GetBlockSizeY()
     {
-        SimpleBlocks[] blocks = GetComponentsInChildren<SimpleBlocks>();
+        Blocks[] blocks = GetComponentsInChildren<Blocks>();
         maxSizeY1 = -GM.PlayerSize.y / 2;
         maxSizeY2 = GM.PlayerSize.y / 2;
         foreach (var block in blocks)

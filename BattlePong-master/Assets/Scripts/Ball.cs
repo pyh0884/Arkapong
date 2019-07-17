@@ -12,6 +12,9 @@ public class Ball : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         GM = FindObjectOfType<GameManager>();
+        transform.localScale = new Vector3(GM.ballScale, GM.ballScale, 1f);
+        transform.position = Vector3.zero;
+        SetRandomVelocity();
     }
 
 
@@ -52,12 +55,12 @@ public class Ball : MonoBehaviour
         Vector2 dir = new Vector2((temp == 0 ? 1 : -1) * Mathf.Cos(tempAngle), Mathf.Sin(tempAngle));
         rb.velocity = dir * GM.ballVelocity;
     }
-    // Start is called before the first frame update
-    void Start()
+
+    public void SetParticularVelocity(Vector2 dir)
     {
-        transform.localScale = new Vector3(GM.ballScale, GM.ballScale, 1f);
-        transform.position = Vector3.zero;
-        SetRandomVelocity();
+        dir.Normalize();
+        dir *= GM.ballVelocity;
+        rb.velocity = dir;
     }
 
     private void Update() {
