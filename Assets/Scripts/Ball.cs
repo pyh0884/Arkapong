@@ -17,21 +17,10 @@ public class Ball : MonoBehaviour
         SetRandomVelocity();
     }
 
-
-    /*public void reflect(GameObject block)
+    public void SetAccelerate(float force)
     {
-        Vector3 dir = block.transform.position - transform.position;
-        dir.Normalize();
-        bool reflectionY = (Mathf.Abs(dir.x) < Mathf.Abs(dir.y)) ? true : false;
-        if (reflectionY)
-        {
-            rb.velocity = new Vector2(rb.velocity.x, -(rb.velocity.y - block.GetComponent<Rigidbody2D>().velocity.y));
-        }
-        else
-            rb.velocity = new Vector2(-rb.velocity.x, rb.velocity.y);
-
-    }*/
-
+        rb.velocity *= force;
+    }
     void testBounds()
     {
         if (transform.position.x < -GM.WIDTH / 2 || transform.position.x > GM.WIDTH / 2)
