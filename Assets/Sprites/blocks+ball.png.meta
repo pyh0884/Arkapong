@@ -1,13 +1,16 @@
 fileFormatVersion: 2
-guid: 4c9de2c55d6ca40d4b0fd1d63879a076
+guid: 5fb7e40b357ed13429729e28c852537e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3514897485512841285
-    second: "\u5757\u7403_0"
+      213: -4453070145063557605
+    second: blocks+ball_0
   - first:
-      213: -8223189122893216480
-    second: "\u5757\u7403_1"
+      213: 2266153650800913400
+    second: blocks+ball_1
+  - first:
+      213: 5579148138835050158
+    second: blocks+ball_2
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -86,47 +89,15 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-  - serializedVersion: 2
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "\u5757\u7403_0"
+      name: blocks+ball_0
       rect:
         serializedVersion: 2
-        x: 5
-        y: 11
-        width: 122
-        height: 161
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b09611c6f77e7412996668762d4ec9b6
-      internalID: 3514897485512841285
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "\u5757\u7403_1"
-      rect:
-        serializedVersion: 2
-        x: 153
-        y: 59
+        x: 35
+        y: 75
         width: 65
         height: 65
       alignment: 0
@@ -136,8 +107,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f81d5b3e8251e446f971efde08cb680e
-      internalID: -8223189122893216480
+      spriteID: ad337adc08b75154fa27ba06fd877593
+      internalID: -4453070145063557605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blocks+ball_1
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 55
+        width: 67
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47e7c8273faaf8842b8ae0980b177648
+      internalID: 2266153650800913400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blocks+ball_2
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 44
+        width: 89
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dea592eaad5d06d4ab5b0fa83282c8bd
+      internalID: 5579148138835050158
       vertices: []
       indices: 
       edges: []
@@ -145,7 +158,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 98d26e6a1804f4283985dc806dd896c8
+    spriteID: 37eb4b3adb0b5624ebd1782f73c8c212
     internalID: 0
     vertices: []
     indices: 
