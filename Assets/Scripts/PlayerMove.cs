@@ -32,12 +32,12 @@ public class PlayerMove : MonoBehaviour
         {
             rb.AddForce(force * Vector2.down);
         }
-
+        rb.velocity=new Vector2(0,Mathf.Clamp(rb.velocity.y, -13, 13));
     }
 
     void GetBlockSizeY()
     {
-        SimpleBlocks[] blocks = GetComponentsInChildren<SimpleBlocks>();
+        Blocks[] blocks = GetComponentsInChildren<Blocks>();
         maxSizeY1 = -GM.PlayerSize.y / 2;
         maxSizeY2 = GM.PlayerSize.y / 2;
         foreach (var block in blocks)

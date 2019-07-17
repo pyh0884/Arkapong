@@ -12,7 +12,7 @@ public class PlayerLoadBlocks : MonoBehaviour
 
     public bool right;
 
-    void loadBlocksAtPoint(Vector2 pos)
+    /*void loadBlocksAtPoint(Vector2 pos)
     {
         //Debug.Log(pos);
         pos.x += 0.5f;
@@ -34,7 +34,7 @@ public class PlayerLoadBlocks : MonoBehaviour
             pos.x = -width/2;
             pos += Vector2.down;
         }
-    }
+    }*/
 
     private void Awake()
     {
@@ -43,20 +43,10 @@ public class PlayerLoadBlocks : MonoBehaviour
         width = GM.PlayerSize.x;
 
         posX = GM.PlayerPos;
-        transform.position = new Vector2(right ? posX : -posX, 0);
+        //transform.position = new Vector2(right ? posX : -posX, 0);
 
-        loadBlocks();
-
-    }
-    // Start is called before the first frame update
-    void Start()
-    {
+        //loadBlocks();
 
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
+   
 }

@@ -6,15 +6,19 @@ public class Ball : MonoBehaviour
 {
     Rigidbody2D rb;
     GameManager GM;
+    public Vector2 speed;
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         GM = FindObjectOfType<GameManager>();
+        transform.localScale = new Vector3(GM.ballScale, GM.ballScale, 1f);
+        transform.position = Vector3.zero;
+        SetRandomVelocity();
     }
 
 
-    public void reflect(GameObject block)
+    /*public void reflect(GameObject block)
     {
         Vector3 dir = block.transform.position - transform.position;
         dir.Normalize();
@@ -26,7 +30,7 @@ public class Ball : MonoBehaviour
         else
             rb.velocity = new Vector2(-rb.velocity.x, rb.velocity.y);
 
-    }
+    }*/
 
     void testBounds()
     {
@@ -51,15 +55,30 @@ public class Ball : MonoBehaviour
         Vector2 dir = new Vector2((temp == 0 ? 1 : -1) * Mathf.Cos(tempAngle), Mathf.Sin(tempAngle));
         rb.velocity = dir * GM.ballVelocity;
     }
-    // Start is called before the first frame update
-    void Start()
+
+    public void SetParticularVelocity(Vector2 dir)
     {
-        transform.localScale = new Vector3(GM.ballScale, GM.ballScale, 1f);
-        transform.position = Vector3.zero;
-        SetRandomVelocity();
+        dir.Normalize();
+        dir *= GM.ballVelocity;
+        rb.velocity = dir;
     }
 
     private void Update() {
         testBounds();
+        if (rb.velocity.x <= 2 && rb.velocity.x >= -2) 
+        {
+            if (rb.velocity.x > 0)
+                rb.velocity = new Vector2(rb.velocity.x + 8, rb.velocity.y);
+            else
+                rb.velocity = new Vector2(rb.velocity.x - 8, rb.velocity.y);
+        }
+        if (rb.velocity.y <= 2 && rb.velocity.y >= -2)
+        {
+            if (rb.velocity.y > 0)
+                rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y+5);
+            else
+                rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y-5);
+        }
+        speed = rb.velocity;
     }
 }
