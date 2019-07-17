@@ -1,0 +1,19 @@
+﻿<Properties StartupConfiguration="{D925FF5C-1C2C-3A7B-FBC5-0F3C4ABAFA4F}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/PlayerMove.cs">
+    <Files>
+      <File FileName="Assets/Scripts/PlayerLoadBlocks.cs" Line="14" Column="5" />
+      <File FileName="Assets/Scripts/PlayerMove.cs" Line="38" Column="25" />
+      <File FileName="Assets/Scripts/SimpleBlocks.cs" Line="18" Column="60" />
+      <File FileName="Assets/Scripts/Ball.cs" Line="15" Column="6" />
+      <File FileName="Assets/Scripts/GameManager.cs" Line="12" Column="31" />
+      <File FileName="Assets/Scripts/UnbreakableBlock.cs" Line="26" Column="43" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
