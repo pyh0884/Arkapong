@@ -10,11 +10,8 @@ public class BallBlocks : Blocks
     {
         destroying = true;
         GetComponent<BoxCollider2D>().enabled = false;
-        foreach (var dir in dirs)
-        {
-            Ball newBall = Instantiate(Resources.Load("ball"), transform.position, Quaternion.identity) as Ball;
-            newBall.SetParticularVelocity(dir);
-        }
-        Destroy(this);
+        GameManager.instance.newBall(transform.position, 7f);
+        GameManager.instance.newBall(transform.position, 7f);
+        Destroy(gameObject);
     }
 }

@@ -49,6 +49,18 @@ public class GameManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
+    public void newBall(Vector3 position, float time)
+    {
+        GameObject newball = Instantiate(FindObjectOfType<Ball>().gameObject, position, Quaternion.identity);
+        StartCoroutine(deleteBall(time, newball));
+    }
+
+    IEnumerator deleteBall(float time, GameObject newball)
+    {
+        yield return new WaitForSeconds(time);
+        Destroy(newball);
+    }
+
     // Start is called before the first frame update
     void Start()
     {
