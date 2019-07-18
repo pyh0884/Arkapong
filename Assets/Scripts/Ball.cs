@@ -7,9 +7,7 @@ public class Ball : MonoBehaviour
     Rigidbody2D rb;
     GameManager GM;
     public Vector2 speed;
-    public ParticleSystem vfx;
     public Animator CameraAnim;
-
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -18,6 +16,7 @@ public class Ball : MonoBehaviour
         transform.position = Vector3.zero;
         SetRandomVelocity();
     }
+
     private void ControlDirectyion()
     {
         transform.localEulerAngles = new Vector3(transform.localEulerAngles.x, transform.localEulerAngles.y, (rb.velocity.x >= 0) ? -Vector2.Angle(Vector2.up, rb.velocity) : Vector2.Angle(Vector2.up, rb.velocity));
@@ -71,6 +70,12 @@ public class Ball : MonoBehaviour
         rb.velocity = dir;
     }
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        Debug.Log(collision);
+        CameraAnim.SetTrigger("Shake");
+        GetComponent<Animator>().SetTrigger("Hit");       
+    }
     private void Update() {
         testBounds();
         ControlDirectyion();
