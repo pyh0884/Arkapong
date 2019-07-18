@@ -460,7 +460,7 @@ MonoBehaviour:
   PlayerPos: 12
   MagnitudeSize: 0
   MagnitudeForce: 0
-  ExplodeRadius: 0
+  ExplodeRadius: 1.7
   endMenu: {fileID: 13712935}
 --- !u!114 &195689940
 MonoBehaviour:

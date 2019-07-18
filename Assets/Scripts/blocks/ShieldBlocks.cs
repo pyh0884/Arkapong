@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class ShieldBlocks : Blocks
 {
-    public override void DestroyThis()
-    {
+
+    private void Start() {
         for (float i = -1; i <= 1; i++)
             for (float j = -1; j <= 1; j++)
             {
@@ -21,8 +21,6 @@ public class ShieldBlocks : Blocks
                     }
                 }
             }
-        Destroy(this);
-
     }
 
     void Shield()

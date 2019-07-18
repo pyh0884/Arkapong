@@ -16,7 +16,7 @@ public class UnbreakableBlock : Blocks
         foreach (var dir in GameManager.instance.blendTree)
         {
             Vector2 setD = dir * GameManager.instance.PlayerSize;
-            Collider2D[] Besides = Physics2D.OverlapPointAll(setD);
+            Collider2D[] Besides = Physics2D.OverlapPointAll(setD + (Vector2)transform.position);
             foreach (var item in Besides)
             {
                 if (item.GetComponent<Blocks>() != null)
@@ -24,13 +24,13 @@ public class UnbreakableBlock : Blocks
                     b = true;
                 }
             }
-        }
+        } 
         return b;
     }
 
     private void Update() {
         if(!CheckBlendTree())
-            Destroy(this);
+            Destroy(gameObject);
     }
 
 }

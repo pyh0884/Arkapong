@@ -5,10 +5,12 @@ using UnityEngine;
 public class Blocks : MonoBehaviour
 {
     bool shield = false;
+    GameObject shieldOBJ;
 
     public void SetShield()
     {
         shield = true;
+        loadShield();
     }
 
     Collider2D blocksCollider;
@@ -30,11 +32,20 @@ public class Blocks : MonoBehaviour
         GameObject obj = collision.gameObject;
         if (obj.GetComponent<Ball>() != null)
         {
-            if(shield)
+            if(shield){
                 shield = false;
+                Destroy(shieldOBJ);
+            }
             else
                 DestroyThis();
         }
+    }
+
+    public void loadShield()
+    {
+        shieldOBJ=Instantiate(Resources.Load("Blocks/shield"),transform.position, Quaternion.identity) as GameObject;
+        shieldOBJ.transform.parent = transform;
+
     }
 
 
