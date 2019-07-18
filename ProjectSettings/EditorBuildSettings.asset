@@ -8,4 +8,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Game Loop.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/BuildingMode.unity
+    guid: 3f02db0a4278798419dc707ded46448e
+  - enabled: 1
+    path: Assets/Scenes/_Main Menu.unity
+    guid: 28c05679fb53a9f41a26ca9435135d31
+  - enabled: 1
+    path: Assets/Scenes/Pong Mode.unity
+    guid: 4503723c18517774ba9b2f6de8f8bca1
   m_configObjects: {}
