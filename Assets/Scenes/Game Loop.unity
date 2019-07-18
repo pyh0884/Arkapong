@@ -458,8 +458,8 @@ MonoBehaviour:
   ballScale: 2
   PlayerSize: {x: 1.25, y: 1.7}
   PlayerPos: 12
-  MagnitudeSize: 0
-  MagnitudeForce: 0
+  MagnitudeSize: 5
+  MagnitudeForce: 0.006
   ExplodeRadius: 1.7
   endMenu: {fileID: 13712935}
 --- !u!114 &195689940
