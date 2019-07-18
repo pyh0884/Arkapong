@@ -74,6 +74,7 @@
     <Compile Include="Assets\Scripts\blocks\UnbreakableBlock.cs" />
     <Compile Include="Assets\Scripts\Bounds.cs" />
     <Compile Include="Assets\Scripts\BuildingMode\CheckBoxController.cs" />
+    <Compile Include="Assets\Scripts\BuildingMode\FunctionMemoryController.cs" />
     <Compile Include="Assets\Scripts\BuildingMode\InstantiateController.cs" />
     <Compile Include="Assets\Scripts\BuildingMode\NumberCheckerController.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />

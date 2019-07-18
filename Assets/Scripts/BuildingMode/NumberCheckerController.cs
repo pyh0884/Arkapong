@@ -29,13 +29,5 @@ public class NumberCheckerController : MonoBehaviour/*数量检查器控制器*/
                     break;
             }
         }
-
-
-
-        /*测试用*/
-        //for (int i = 0; i < remainedNumber.Length; i++)
-        //{
-        //    Debug.Log("Function " + (CheckBoxController.FunctionKind)i + ": "+remainedNumber[i]);
-        //}
     }
 }
