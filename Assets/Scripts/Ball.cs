@@ -7,6 +7,8 @@ public class Ball : MonoBehaviour
     Rigidbody2D rb;
     GameManager GM;
     public Vector2 speed;
+    public ParticleSystem vfx;
+    public Animator CameraAnim;
 
     private void Awake()
     {
@@ -18,19 +20,19 @@ public class Ball : MonoBehaviour
     }
 
 
-    /*public void reflect(GameObject block)
-    {
-        Vector3 dir = block.transform.position - transform.position;
-        dir.Normalize();
-        bool reflectionY = (Mathf.Abs(dir.x) < Mathf.Abs(dir.y)) ? true : false;
-        if (reflectionY)
-        {
-            rb.velocity = new Vector2(rb.velocity.x, -(rb.velocity.y - block.GetComponent<Rigidbody2D>().velocity.y));
-        }
-        else
-            rb.velocity = new Vector2(-rb.velocity.x, rb.velocity.y);
+    //public void reflect(GameObject block)
+    //{
+    //    Vector3 dir = block.transform.position - transform.position;
+    //    dir.Normalize();
+    //    bool reflectionY = (Mathf.Abs(dir.x) < Mathf.Abs(dir.y)) ? true : false;
+    //    if (reflectionY)
+    //    {
+    //        rb.velocity = new Vector2(rb.velocity.x, -(rb.velocity.y - block.GetComponent<Rigidbody2D>().velocity.y));
+    //    }
+    //    else
+    //        rb.velocity = new Vector2(-rb.velocity.x, rb.velocity.y);
 
-    }*/
+    //}
 
     void testBounds()
     {
@@ -65,6 +67,7 @@ public class Ball : MonoBehaviour
 
     private void Update() {
         testBounds();
+        
         if (rb.velocity.x <= 2 && rb.velocity.x >= -2) 
         {
             if (rb.velocity.x > 0)
