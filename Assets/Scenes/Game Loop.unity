@@ -388,6 +388,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a7d799cd48b0f914ea00b8c1b9be2083, type: 3}
+--- !u!1 &13712935 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9030640481118981064, guid: a7d799cd48b0f914ea00b8c1b9be2083,
+    type: 3}
+  m_PrefabInstance: {fileID: 13712934}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &27664127
 GameObject:
   m_ObjectHideFlags: 0
@@ -2128,6 +2134,7 @@ MonoBehaviour:
   MagnitudeSize: 0
   MagnitudeForce: 0
   ExplodeRadius: 0
+  endMenu: {fileID: 13712935}
 --- !u!1 &219965751
 GameObject:
   m_ObjectHideFlags: 0
@@ -28068,6 +28075,16 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3086073283760285277, guid: 8ecb0d365d2e35a4dbd64dc8c2a695c4,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 220011495}
+    - target: {fileID: 3086073283760285277, guid: 8ecb0d365d2e35a4dbd64dc8c2a695c4,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadScene
+      objectReference: {fileID: 0}
     - target: {fileID: 3086073284517108721, guid: 8ecb0d365d2e35a4dbd64dc8c2a695c4,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -28097,16 +28114,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 3086073283760285277, guid: 8ecb0d365d2e35a4dbd64dc8c2a695c4,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 220011495}
-    - target: {fileID: 3086073283760285277, guid: 8ecb0d365d2e35a4dbd64dc8c2a695c4,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: LoadScene
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8ecb0d365d2e35a4dbd64dc8c2a695c4, type: 3}

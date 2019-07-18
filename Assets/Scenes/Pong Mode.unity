@@ -868,6 +868,7 @@ MonoBehaviour:
   MagnitudeSize: 0
   MagnitudeForce: 0
   ExplodeRadius: 0
+  endMenu: {fileID: 417430245}
 --- !u!1001 &239872163
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1005,6 +1006,16 @@ PrefabInstance:
       propertyPath: m_BlockingMask.m_Bits
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 3086073283760285277, guid: 8ecb0d365d2e35a4dbd64dc8c2a695c4,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 279011817}
+    - target: {fileID: 3086073283760285277, guid: 8ecb0d365d2e35a4dbd64dc8c2a695c4,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadScene
+      objectReference: {fileID: 0}
     - target: {fileID: 3086073284517108721, guid: 8ecb0d365d2e35a4dbd64dc8c2a695c4,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -1034,16 +1045,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 3086073283760285277, guid: 8ecb0d365d2e35a4dbd64dc8c2a695c4,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 279011817}
-    - target: {fileID: 3086073283760285277, guid: 8ecb0d365d2e35a4dbd64dc8c2a695c4,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: LoadScene
       objectReference: {fileID: 0}
     - target: {fileID: 1503520993491012954, guid: 8ecb0d365d2e35a4dbd64dc8c2a695c4,
         type: 3}
@@ -6730,6 +6731,12 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.65, y: 1.01}
   m_EdgeRadius: 0
+--- !u!1 &417430245 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9030640481118981064, guid: a7d799cd48b0f914ea00b8c1b9be2083,
+    type: 3}
+  m_PrefabInstance: {fileID: 1143052569}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &431615337
 PrefabInstance:
   m_ObjectHideFlags: 0
