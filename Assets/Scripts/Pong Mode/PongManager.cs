@@ -26,6 +26,7 @@ public class PongManager : ModeManager
     public void GameEnd(bool right)
     {
         SetWin(right);
+        FindObjectOfType<AudioManager>().Play("Winning BGM");
     }
 
     IEnumerator StartTimer()

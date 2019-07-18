@@ -3,6 +3,7 @@ public class NumberCheckerController : MonoBehaviour/*数量检查器控制器*/
 {
     public int[] remainedNumber;//砖块剩余数量
     public GameObject[] numberPosition;//数量显示的位置
+    public GameObject[] functionShow;//砖块功能展示
 
     private void Update()//每帧更新的部分
     {
@@ -26,8 +27,22 @@ public class NumberCheckerController : MonoBehaviour/*数量检查器控制器*/
                     break;
                 case 0://还剩0个
                     numberPosition[(int)CheckBoxController.currentFunction].GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("BuildingMode/0");
+                    functionShow[(int)CheckBoxController.currentFunction].GetComponent<SpriteRenderer>().color = new Color(0.5f, 0.5f, 0.5f, 1);//使砖块颜色变灰
                     break;
             }
         }
+        //Debug.Log(BuildFinish());
+    }
+
+    public bool BuildFinish()//是否建造完毕
+    {
+        foreach (var item in remainedNumber)
+        {
+            if(item != 0)
+            {
+                return false;
+            }
+        }
+        return true;
     }
 }

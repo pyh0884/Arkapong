@@ -4,60 +4,49 @@ using UnityEngine;
 
 public class PlayerLoadBlocks : MonoBehaviour
 {
-    string[] blocksName = { "SimpleBlocks", "ExplodeBlocks", "ShieldBlocks", "UnbreakableBlocks", "BallBlocks", "MageneticBlocks" };
-    int[,] blocks;
-
     GameManager GM;
-
+    
     float height;
     float width;
     float posX;
 
     public bool right;
 
-    void loadBlocksAtPoint(Vector2 pos, int index)
+    /*void loadBlocksAtPoint(Vector2 pos)
     {
         //Debug.Log(pos);
-        pos.x += GM.PlayerSize.x / 2;
-        pos.y -= GM.PlayerSize.y / 2;
-        GameObject childTemp = Instantiate(Resources.Load(blocksName[index]), new Vector3(pos.x, pos.y, 0f) + transform.position, Quaternion.identity) as GameObject;
-        childTemp.transform.parent = gameObject.transform.Find("Blocks");
+        pos.x += 0.5f;
+        pos.y -= 0.5f;
+        GameObject childTemp = Instantiate(Resources.Load("BasicBlock"), new Vector3(pos.x, pos.y, 0f) + transform.position, Quaternion.identity) as GameObject;
+        childTemp.transform.parent = gameObject.transform;
     }
 
     void loadBlocks()
     {
-        int[,] BlockDic = FunctionMemoryController.blocks;
-        int col, row;
-        row = BlockDic.GetLength(0);
-        col = BlockDic.GetLength(1);
-        int heightIndex = row / 2;
-        int widthIndex = col;
-        int index = right ? heightIndex : 0;
-        width = widthIndex * GM.PlayerSize.x;
-        height = heightIndex * GM.PlayerSize.y;
         Vector2 pos = new Vector2(-width / 2, height / 2);
-        for (int y = index; y < index + heightIndex; y++)
+        for (int y = 0; y < height; y++)
         {
-            for (int x = 0; x < widthIndex; x++)
+            for (int x = 0; x < width; x++)
             {
-                loadBlocksAtPoint(pos, BlockDic[y, x]);
-                pos += Vector2.right * GM.PlayerSize.x;
+                loadBlocksAtPoint(pos);
+                pos += Vector2.right;
             }
-            pos.x = -width / 2;
-            pos += Vector2.down * GM.PlayerSize.y;
+            pos.x = -width/2;
+            pos += Vector2.down;
         }
-    }
+    }*/
 
     private void Awake()
     {
         GM = FindObjectOfType<GameManager>();
+        height = GM.PlayerSize.y;
+        width = GM.PlayerSize.x;
 
         posX = GM.PlayerPos;
         //transform.position = new Vector2(right ? posX : -posX, 0);
 
-        if (FindObjectOfType<EnemyMode>() != null)
-            loadBlocks();
+        //loadBlocks();
 
     }
-
+   
 }

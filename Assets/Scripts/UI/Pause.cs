@@ -17,12 +17,14 @@ public class Pause : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape) && !paused)
         {
+            FindObjectOfType<AudioManager>().Play("Menu Open");
             Time.timeScale = 0;            
             PauseMenu.SetActive(true);
             paused = true;
         }
         else if (Input.GetKeyDown(KeyCode.Escape) && paused)
         {
+            FindObjectOfType<AudioManager>().Play("Menu Close");
             //FindObjectOfType<AudioManager>().Play("Click");
             PauseMenu.SetActive(false);
             Time.timeScale = 1;

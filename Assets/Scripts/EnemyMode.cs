@@ -8,12 +8,17 @@ public class EnemyMode : ModeManager
     public void CheckPlayer()
     {
         int num = player1.transform.Find("Blocks").transform.childCount;
-        if(num == 0)
+        if (num == 0)
+        {
+            FindObjectOfType<AudioManager>().Play("Winning BGM");
             SetWin(false);
+        }
         num = player2.transform.Find("Blocks").transform.childCount;
-        if(num == 0)
+        if (num == 0)
+        {
+            FindObjectOfType<AudioManager>().Play("Winning BGM");
             SetWin(true);
-            
+        }    
     }
     
     private void FixedUpdate() {
