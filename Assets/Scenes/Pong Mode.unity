@@ -863,7 +863,7 @@ MonoBehaviour:
   PlayerVelocity: 300
   ballVelocity: 25
   ballScale: 2
-  PlayerSize: {x: 5, y: 20}
+  PlayerSize: {x: 1.25, y: 1.7}
   PlayerPos: 12
   MagnitudeSize: 0
   MagnitudeForce: 0
