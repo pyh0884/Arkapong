@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour
 {
     public GameObject PauseMenu;
-    public GameObject DeadMenu;
     public void Play(int number)
     {
         if (PauseMenu != null)
@@ -18,21 +17,6 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene(number);
     }
 
-    public void RePlay()
-    {
-        if (DeadMenu != null)
-        {
-            DeadMenu.SetActive(false);
-        }
-        if (PauseMenu != null)
-        {
-            PauseMenu.SetActive(false);
-        }
-
-
-        Time.timeScale = 1;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-    }
     public void ExitGame()
     {
         Application.Quit();
