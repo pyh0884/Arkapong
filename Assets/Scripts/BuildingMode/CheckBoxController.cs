@@ -17,9 +17,9 @@ public class CheckBoxController : MonoBehaviour/*选择框控制器*/
     {
         if (leftPlayer)//如果是左侧的玩家在操作
         {
-            if (GetComponent<SpriteRenderer>().color != Color.white)
+            if (GetComponent<SpriteRenderer>().sprite != Resources.Load<Sprite>("BuildingMode/Icon/Red"))//如果选择框不是红色
             {
-                GetComponent<SpriteRenderer>().color = Color.white;
+                GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("BuildingMode/Icon/Red");//替换为红色选择框
             }
 
             if (Input.GetKeyUp(KeyCode.W))//如果按下W键
@@ -33,9 +33,9 @@ public class CheckBoxController : MonoBehaviour/*选择框控制器*/
         }
         else if (rightPlayer)//如果是右侧的玩家在操作
         {
-            if (GetComponent<SpriteRenderer>().color != Color.black)
+            if (GetComponent<SpriteRenderer>().sprite != Resources.Load<Sprite>("BuildingMode/Icon/Blue"))//如果选择框不是蓝色
             {
-                GetComponent<SpriteRenderer>().color = Color.black;
+                GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("BuildingMode/Icon/Blue");//替换为蓝色选择框
             }
 
             if (Input.GetKeyUp(KeyCode.UpArrow))//如果按下键盘上键
