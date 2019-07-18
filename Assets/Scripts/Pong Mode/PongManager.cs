@@ -11,9 +11,9 @@ public class PongManager : ModeManager
 
     public float timeCount;
 
-    Bound leftBound, rightBound;
+    public Bound leftBound, rightBound;
 
-    Text timerText;
+    public Text timerText;    
 
     //public int 
 
@@ -21,19 +21,21 @@ public class PongManager : ModeManager
     private void Start() {
         instance = this;
         timer = timeCount;
+        StartCoroutine(StartTimer());
     }
 
     public void GameEnd(bool right)
     {
         SetWin(right);
         FindObjectOfType<AudioManager>().Play("Winning BGM");
+        Time.timeScale=0;
     }
 
     IEnumerator StartTimer()
     {
         while(timer > 0)
         {
-            timerText.text = "" + (int)timer--;
+            timerText.text = "" + (int)timer--; 
             yield return new WaitForSeconds(1f);
         }
         GameEnd(leftBound.score > rightBound.score ? false : true);
