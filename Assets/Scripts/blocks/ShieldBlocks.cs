@@ -6,15 +6,23 @@ public class ShieldBlocks : Blocks
 {
     public override void DestroyThis()
     {
-        if(destroying)
-        {
-            Destroy(this);
-        }
-        else
-        {
-            destroying = true;
-            Shield();
-        }
+        for (float i = -1; i <= 1; i++)
+            for (float j = -1; j <= 1; j++)
+            {
+                if (i == 0 && j == 0)
+                    continue;
+                Vector2 dir = new Vector2(i, j) * GameManager.instance.PlayerSize + (Vector2)transform.position;
+                Collider2D[] Besides = Physics2D.OverlapPointAll(dir);
+                foreach (var item in Besides)
+                {
+                    if (item.GetComponent<Blocks>() != null)
+                    {
+                        item.GetComponent<Blocks>().SetShield();
+                    }
+                }
+            }
+        Destroy(this);
+
     }
 
     void Shield()
