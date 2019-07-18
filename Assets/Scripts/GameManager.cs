@@ -6,6 +6,8 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
 
+    public Vector2[] blendTree = {Vector2.up, Vector2.left, Vector2.down, Vector2.right};
+
     [Header("Size of play ground")]
     [SerializeField]
     float widthBound,heightBound;

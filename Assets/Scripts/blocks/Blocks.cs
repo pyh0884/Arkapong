@@ -4,6 +4,13 @@ using UnityEngine;
 
 public class Blocks : MonoBehaviour
 {
+    bool shield = false;
+
+    public void SetShield()
+    {
+        shield = true;
+    }
+
     Collider2D blocksCollider;
     public bool destroying = false; //防止在加入一些其他功能后会导致销毁代码反复调用，比如两个相邻爆炸砖块在播放爆炸动画时来回触发
 
@@ -23,8 +30,10 @@ public class Blocks : MonoBehaviour
         GameObject obj = collision.gameObject;
         if (obj.GetComponent<Ball>() != null)
         {
-            //obj.GetComponent<Ball>().reflect(gameObject);
-            DestroyThis();
+            if(shield)
+                shield = false;
+            else
+                DestroyThis();
         }
     }
 
