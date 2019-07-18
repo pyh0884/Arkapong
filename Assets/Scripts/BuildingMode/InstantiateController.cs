@@ -8,7 +8,8 @@ public class InstantiateController : MonoBehaviour/*实例化控制器*/
     private bool instantiated = false;//是否已经实例化了砖块？
     public static bool confirm = false;//是否确认选择了功能？
     private GameObject currentBlock;//当前的砖块
-    public GameObject numberChecker;//数量检测器
+    private GameObject numberChecker;//数量检测器
+    
 
     private void Start()//初始化
     {
@@ -45,7 +46,7 @@ public class InstantiateController : MonoBehaviour/*实例化控制器*/
                 instantiatePlace++;//移动到下一个位置实例化
                 confirm = !(instantiated = false);//设定未实例化砖块，已确认上一个砖块
             }
-            if (Input.GetKeyUp(KeyCode.KeypadEnter) && CheckBoxController.rightPlayer)//如果右侧玩家按下小键盘回车键
+            if ((Input.GetKeyUp(KeyCode.KeypadEnter) || Input.GetKeyUp(KeyCode.Return)) && CheckBoxController.rightPlayer)//如果右侧玩家按下回车键
             {
                 CheckBoxController.leftPlayer = !(CheckBoxController.rightPlayer = false);//换到左侧玩家进行选择
                 instantiatePlace++;//移动到下一个位置实例化
