@@ -18,6 +18,12 @@ public class Ball : MonoBehaviour
         transform.position = Vector3.zero;
         SetRandomVelocity();
     }
+    private void ControlDirectyion()
+    {
+        transform.localEulerAngles = new Vector3(transform.localEulerAngles.x, transform.localEulerAngles.y, (rb.velocity.x >= 0) ? -Vector2.Angle(Vector2.up, rb.velocity) : Vector2.Angle(Vector2.up, rb.velocity));
+
+    }
+
 
 
     //public void reflect(GameObject block)
@@ -67,7 +73,7 @@ public class Ball : MonoBehaviour
 
     private void Update() {
         testBounds();
-        
+        ControlDirectyion();
         if (rb.velocity.x <= 2 && rb.velocity.x >= -2) 
         {
             if (rb.velocity.x > 0)
