@@ -401,6 +401,46 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2539873072151740899, guid: 59eeff1c4d5229f40845142a18a1abe4,
+        type: 3}
+      propertyPath: audios.Array.data[3].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 460d367eb2441da4c9ab6cc2f18adfd3, type: 3}
+    - target: {fileID: 2539873072151740899, guid: 59eeff1c4d5229f40845142a18a1abe4,
+        type: 3}
+      propertyPath: audios.Array.data[4].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 3cb44244c1c5ee04cb4ca588af780670, type: 3}
+    - target: {fileID: 2539873072151740899, guid: 59eeff1c4d5229f40845142a18a1abe4,
+        type: 3}
+      propertyPath: audios.Array.data[7].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 25134ca146fef814fbfe8c1c425071f9, type: 3}
+    - target: {fileID: 2539873072151740899, guid: 59eeff1c4d5229f40845142a18a1abe4,
+        type: 3}
+      propertyPath: audios.Array.data[13].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 6f80bc4aa018df547a317e10706a605d, type: 3}
+    - target: {fileID: 2539873072151740899, guid: 59eeff1c4d5229f40845142a18a1abe4,
+        type: 3}
+      propertyPath: audios.Array.data[5].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 7385b22b082f6eb4ebb844cf8e23adf3, type: 3}
+    - target: {fileID: 2539873072151740899, guid: 59eeff1c4d5229f40845142a18a1abe4,
+        type: 3}
+      propertyPath: audios.Array.data[6].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 57c0db891f454e445a55adfd5278846f, type: 3}
+    - target: {fileID: 2539873072151740899, guid: 59eeff1c4d5229f40845142a18a1abe4,
+        type: 3}
+      propertyPath: audios.Array.data[11].clip
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2539873072151740899, guid: 59eeff1c4d5229f40845142a18a1abe4,
+        type: 3}
+      propertyPath: audios.Array.data[8].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 76567e45df8ead64cb6e3e504d0fa923, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 59eeff1c4d5229f40845142a18a1abe4, type: 3}
 --- !u!1 &984921568
