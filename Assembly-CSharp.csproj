@@ -74,12 +74,35 @@
     <Compile Include="Assets\Scripts\blocks\UnbreakableBlock.cs" />
     <Compile Include="Assets\Scripts\Bounds.cs" />
     <Compile Include="Assets\Scripts\BuildingMode\CheckBoxController.cs" />
+    <Compile Include="Assets\Scripts\BuildingMode\FunctionMemoryController.cs" />
     <Compile Include="Assets\Scripts\BuildingMode\InstantiateController.cs" />
     <Compile Include="Assets\Scripts\BuildingMode\NumberCheckerController.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerLoadBlocks.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerMove.cs" />
     <Compile Include="Assets\Scripts\Trans.cs" />
+    <Compile Include="Assets\Scripts\VFXScripts\_Demo\DemoManager.cs" />
+    <Compile Include="Assets\Scripts\VFXScripts\_Demo\FPSDisplay.cs" />
+    <Compile Include="Assets\Scripts\VFXScripts\_Demo\FPSTest.cs" />
+    <Compile Include="Assets\Scripts\VFXScripts\_Demo\LoopingParticleSystemsManager.cs" />
+    <Compile Include="Assets\Scripts\VFXScripts\_Demo\MouseFollow.cs" />
+    <Compile Include="Assets\Scripts\VFXScripts\_Demo\MouseRotateCamera.cs" />
+    <Compile Include="Assets\Scripts\VFXScripts\_Demo\OneshotParticleSystemsManager.cs" />
+    <Compile Include="Assets\Scripts\VFXScripts\_Demo\ParticleManager.cs" />
+    <Compile Include="Assets\Scripts\VFXScripts\AnimatedLight.cs" />
+    <Compile Include="Assets\Scripts\VFXScripts\Billboard.cs" />
+    <Compile Include="Assets\Scripts\VFXScripts\CameraShake.cs" />
+    <Compile Include="Assets\Scripts\VFXScripts\DestroyAfterTime.cs" />
+    <Compile Include="Assets\Scripts\VFXScripts\DestroyOnParticlesDead.cs" />
+    <Compile Include="Assets\Scripts\VFXScripts\DestroyOnTrailsDestroyed.cs" />
+    <Compile Include="Assets\Scripts\VFXScripts\IgnoreTimeScale.cs" />
+    <Compile Include="Assets\Scripts\VFXScripts\ParticleSystems.cs" />
+    <Compile Include="Assets\Scripts\VFXScripts\ParticleSystemsSimulationSpeed.cs" />
+    <Compile Include="Assets\Scripts\VFXScripts\PerlinNoise.cs" />
+    <Compile Include="Assets\Scripts\VFXScripts\RendererSortingOrder.cs" />
+    <Compile Include="Assets\Scripts\VFXScripts\Rotator.cs" />
+    <Compile Include="Assets\Scripts\VFXScripts\TrailRenderers.cs" />
+    <Compile Include="Assets\Scripts\VFXScripts\TransformNoise.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/HenryLiu/Documents/GitHub/BattlePong/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>

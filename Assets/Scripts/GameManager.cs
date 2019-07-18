@@ -26,6 +26,9 @@ public class GameManager : MonoBehaviour
     public float MagnitudeSize;
     public float MagnitudeForce;
     public float ExplodeRadius;
+
+    [Header("EndMenu")]
+    public GameObject endMenu;
     
     
     public float WIDTH{

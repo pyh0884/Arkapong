@@ -4,10 +4,14 @@ using UnityEngine;
 
 public class BreakEffect : MonoBehaviour
 {
+    bool endup = false;
     public void EndEffect()
     {
-        Debug.Log("end");
-        //DestroyImmediate(this);
-        gameObject.SetActive(false);
+        endup = true;
+    }
+
+    private void FixedUpdate() {
+        if(endup)
+            Destroy(gameObject);
     }
 }

@@ -39,7 +39,7 @@ public class Ball : MonoBehaviour
 
     //}
 
-    void testBounds()
+    /* void testBounds()
     {
         if (transform.position.x < -GM.WIDTH / 2 || transform.position.x > GM.WIDTH / 2)
         {
@@ -53,7 +53,7 @@ public class Ball : MonoBehaviour
             transform.position = new Vector2(transform.position.x, transform.position.y - Mathf.Sign(transform.position.y)*0.1f);
         }
             
-    }
+    }*/
 
     void SetRandomVelocity()
     {
@@ -72,12 +72,12 @@ public class Ball : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log(collision);
+//        Debug.Log(collision);
         CameraAnim.SetTrigger("Shake");
         GetComponent<Animator>().SetTrigger("Hit");       
     }
     private void Update() {
-        testBounds();
+        //testBounds();
         ControlDirectyion();
         if (rb.velocity.x <= 2 && rb.velocity.x >= -2) 
         {

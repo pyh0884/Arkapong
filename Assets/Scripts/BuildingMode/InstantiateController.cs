@@ -9,7 +9,6 @@ public class InstantiateController : MonoBehaviour/*实例化控制器*/
     public static bool confirm = false;//是否确认选择了功能？
     private GameObject currentBlock;//当前的砖块
     private GameObject numberChecker;//数量检测器
-    
 
     private void Start()//初始化
     {
@@ -42,12 +41,14 @@ public class InstantiateController : MonoBehaviour/*实例化控制器*/
 
             if (Input.GetKeyUp(KeyCode.Space) && CheckBoxController.leftPlayer)//如果左侧玩家按下空格
             {
+                FunctionMemoryController.functionKind.Add((int)CheckBoxController.currentFunction);//记录砖块的功能
                 CheckBoxController.rightPlayer = !(CheckBoxController.leftPlayer = false);//换到右侧玩家进行选择
                 instantiatePlace++;//移动到下一个位置实例化
                 confirm = !(instantiated = false);//设定未实例化砖块，已确认上一个砖块
             }
             if ((Input.GetKeyUp(KeyCode.KeypadEnter) || Input.GetKeyUp(KeyCode.Return)) && CheckBoxController.rightPlayer)//如果右侧玩家按下回车键
             {
+                FunctionMemoryController.functionKind.Add((int)CheckBoxController.currentFunction);//记录砖块的功能
                 CheckBoxController.leftPlayer = !(CheckBoxController.rightPlayer = false);//换到左侧玩家进行选择
                 instantiatePlace++;//移动到下一个位置实例化
                 confirm = !(instantiated = false);//设定未实例化砖块，已确认上一个砖块

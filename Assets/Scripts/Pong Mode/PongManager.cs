@@ -1,35 +1,40 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class PongManager : MonoBehaviour
+public class PongManager : ModeManager
 {
     public static PongManager instance;
 
-    public int health;
+    float timer;
 
     public float timeCount;
 
     Bound leftBound, rightBound;
 
+    Text timerText;
+
     //public int 
 
-    private void Awake()
-    {
+
+    private void Start() {
         instance = this;
+        timer = timeCount;
     }
 
     public void GameEnd(bool right)
     {
-        if (right)
-            Debug.Log("Right win");
-        else
-            Debug.Log("Left win");
+        SetWin(right);
     }
 
     IEnumerator StartTimer()
     {
-        yield return new WaitForSeconds(timeCount);
+        while(timer > 0)
+        {
+            timerText.text = "" + (int)timer--;
+            yield return new WaitForSeconds(1f);
+        }
         GameEnd(leftBound.score > rightBound.score ? false : true);
     }
 
