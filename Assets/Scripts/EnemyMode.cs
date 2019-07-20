@@ -22,8 +22,9 @@ public class EnemyMode : ModeManager
         }    
     }
 
-    private void Awake()
+    private void Start()
     {
+
         time = Time.time;
     }
 

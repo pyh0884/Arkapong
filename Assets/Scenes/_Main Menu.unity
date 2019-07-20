@@ -1667,8 +1667,8 @@ MonoBehaviour:
   m_FillRect: {fileID: 155234368}
   m_HandleRect: {fileID: 122486250}
   m_Direction: 0
-  m_MinValue: -80
-  m_MaxValue: 20
+  m_MinValue: -50
+  m_MaxValue: 10
   m_WholeNumbers: 0
   m_Value: 1
   m_OnValueChanged:
@@ -2534,6 +2534,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Trans
       objectReference: {fileID: 0}
+    - target: {fileID: 1089853606878660950, guid: 3b885056501cb2f4fb62f8f71dd3cef8,
+        type: 3}
+      propertyPath: PauseMenu
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 1089853606878660951, guid: 3b885056501cb2f4fb62f8f71dd3cef8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2588,11 +2593,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1089853606878660950, guid: 3b885056501cb2f4fb62f8f71dd3cef8,
-        type: 3}
-      propertyPath: PauseMenu
-      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3b885056501cb2f4fb62f8f71dd3cef8, type: 3}
