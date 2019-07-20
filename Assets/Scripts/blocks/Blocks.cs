@@ -7,7 +7,7 @@ public class Blocks : MonoBehaviour
     bool shield = false;
     GameObject shieldOBJ;
 
-    public void SetShield()
+    public virtual void SetShield()
     {
         shield = true;
         loadShield();

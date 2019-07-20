@@ -22,6 +22,6 @@ public class Bound : MonoBehaviour
 
     void updateText()
     {
-        scoreNum.text = "" + scoreNum;
+        scoreNum.text = "" + score;
     }
 }

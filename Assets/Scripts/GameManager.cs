@@ -17,6 +17,10 @@ public class GameManager : MonoBehaviour
     public float PlayerVelocity;
     public float ballVelocity;
 
+    [Header("Anggle of velocity")]
+    public float degreeMax;
+    public float degreeMin;
+
     [Header("Size")]
     public float ballScale=1;
     public Vector2 PlayerSize;

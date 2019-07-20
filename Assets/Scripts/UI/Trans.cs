@@ -21,8 +21,13 @@ public class Trans : MonoBehaviour
         }
 
         Time.timeScale = 1;
-        yield return new WaitForSeconds(12f/60f);
+        
         SceneManager.LoadScene(number);
+        yield return new WaitForSeconds (1);
+    }
 
+    public void QuickLoad(int number)
+    {
+        SceneManager.LoadScene(number);
     }
 }

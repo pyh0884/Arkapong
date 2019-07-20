@@ -14,10 +14,7 @@ public class PongManager : ModeManager
     public Bound leftBound, rightBound;
 
     public Text timerText;    
-
-    //public int 
-
-
+       
     private void Start() {
         instance = this;
         timer = timeCount;

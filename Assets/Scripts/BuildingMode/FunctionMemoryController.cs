@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 public class FunctionMemoryController : MonoBehaviour/*功能存储控制器*/
 {
 
@@ -15,7 +16,9 @@ public class FunctionMemoryController : MonoBehaviour/*功能存储控制器*/
 
     private void Start()
     {
-        DontDestroyOnLoad(gameObject);//设定不随场景销毁
+        //if (SceneManager.GetActiveScene().rootCount != 0)
+            DontDestroyOnLoad(gameObject);//设定不随场景销毁
+       
         for (int i = 0; i < 18; i++)//对于整个矩阵的行
         {
             for (int j = 0; j < 4; j++)//对于整个矩阵的列

@@ -9,6 +9,7 @@ public class InstantiateController : MonoBehaviour/*实例化控制器*/
     public static bool confirm = false;//是否确认选择了功能？
     private GameObject currentBlock;//当前的砖块
     private GameObject numberChecker;//数量检测器
+    private float timer = 0.5f;
 
     private void Start()//初始化
     {
@@ -27,7 +28,7 @@ public class InstantiateController : MonoBehaviour/*实例化控制器*/
             }
             if (numberChecker.GetComponent<NumberCheckerController>().remainedNumber[(int)CheckBoxController.currentFunction] != 0)//如果该砖块的剩余数量不为0
             {
-                currentBlock = Instantiate(instantiateBlock[(int)CheckBoxController.currentFunction], instantiatePosition[instantiatePlace].position, Quaternion.identity);//instantiatePosition[instantiatePlace]位置实例化砖块
+                currentBlock = Instantiate(instantiateBlock[(int)CheckBoxController.currentFunction], instantiatePosition[instantiatePlace].position, Quaternion.identity);//instantiatePosition[instantiatePlace]位置实例化砖块   
                 instantiated = true;//设定已经实例化了砖块
             }
         }

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2566141253508948917}
   - component: {fileID: 2566141253508948916}
   - component: {fileID: -1432637865355566771}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: UnbreakableBlocks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -154,7 +154,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2566141253807101916}
   - component: {fileID: 2566141253807101917}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: "\u666E\u901A\u5757\u513F\u548C\u5149\u5708_1 (2)"
   m_TagString: Untagged
   m_Icon: {fileID: 0}

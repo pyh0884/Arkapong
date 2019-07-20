@@ -33,6 +33,7 @@ public class Pause : MonoBehaviour
     }
     public void resume()
     {
+        FindObjectOfType<AudioManager>().Play("Menu Close");
         PauseMenu.SetActive(false);
         Time.timeScale = 1;
         paused = false;

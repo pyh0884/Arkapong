@@ -6,7 +6,9 @@ public class PlayerLoadBlocks : MonoBehaviour
     string[] blocksName = { "SimpleBlocks", "ExplodeBlocks", "ShieldBlocks", "UnbreakableBlocks", "BallBlocks", "MageneticBlocks" };
     int[,] blocks;
 
-    GameManager GM;
+    public GameManager GM;
+
+    LevelCreater LC;
     
 
     float height;
@@ -19,13 +21,15 @@ public class PlayerLoadBlocks : MonoBehaviour
     {
         pos.x += GM.PlayerSize.x / 2;
         pos.y -= GM.PlayerSize.y / 2;
-        GameObject childTemp = Instantiate(Resources.Load("Blocks/" + blocksName[index+1]), new Vector3(pos.x, pos.y, 0f) + transform.position, Quaternion.identity) as GameObject;
+        GameObject childTemp = Instantiate(Resources.Load("Blocks/" + blocksName[index]), new Vector3(pos.x, pos.y, 0f) + transform.position, Quaternion.identity) as GameObject;
         childTemp.transform.parent = gameObject.transform.Find("Blocks");
     }
 
     void loadBlocks()
     {
-        int[,] BlockDic = FunctionMemoryController.blocks;
+        Debug.Log(GM.PlayerPos);
+        transform.position = new Vector3((right ? 1 : -1) * GM.PlayerPos, 0, 0);
+        int[,] BlockDic = LC.blocksArray;
         int col, row;
         row = BlockDic.GetLength(0);
         col = BlockDic.GetLength(1);
@@ -47,16 +51,21 @@ public class PlayerLoadBlocks : MonoBehaviour
         }
     }
 
-    private void Awake()
+    //public void setblock()
+    //{
+    //    
+   // }
+
+    private void Start()
     {
+        LC = FindObjectOfType<LevelCreater>();
         GM = FindObjectOfType<GameManager>();
-        transform.position = new Vector3((right?1:-1)*GM.PlayerPos, 0, 0);
+        
         height = GM.PlayerSize.y;
         width = GM.PlayerSize.x;
 
         posX = GM.PlayerPos;
-
-        if (FindObjectOfType<EnemyMode>() != null)
+          if(FindObjectOfType<EnemyMode>() != null)
             loadBlocks();
 
     }

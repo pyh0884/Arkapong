@@ -10,8 +10,8 @@ public class BallBlocks : Blocks
     {
         destroying = true;
         GetComponent<BoxCollider2D>().enabled = false;
-        GameManager.instance.newBall(transform.position, 7f);
-        GameManager.instance.newBall(transform.position, 7f);
+        GameManager.instance.newBall(transform.position, 5f);
+        GameManager.instance.newBall(transform.position, 5f);
         Destroy(gameObject);
     }
 }

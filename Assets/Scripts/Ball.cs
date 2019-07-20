@@ -17,43 +17,11 @@ public class Ball : MonoBehaviour
         SetRandomVelocity();
     }
 
-    private void ControlDirectyion()
+    private void ControlDirection()
     {
         transform.localEulerAngles = new Vector3(transform.localEulerAngles.x, transform.localEulerAngles.y, (rb.velocity.x >= 0) ? -Vector2.Angle(Vector2.up, rb.velocity) : Vector2.Angle(Vector2.up, rb.velocity));
 
     }
-
-
-
-    //public void reflect(GameObject block)
-    //{
-    //    Vector3 dir = block.transform.position - transform.position;
-    //    dir.Normalize();
-    //    bool reflectionY = (Mathf.Abs(dir.x) < Mathf.Abs(dir.y)) ? true : false;
-    //    if (reflectionY)
-    //    {
-    //        rb.velocity = new Vector2(rb.velocity.x, -(rb.velocity.y - block.GetComponent<Rigidbody2D>().velocity.y));
-    //    }
-    //    else
-    //        rb.velocity = new Vector2(-rb.velocity.x, rb.velocity.y);
-
-    //}
-
-    /* void testBounds()
-    {
-        if (transform.position.x < -GM.WIDTH / 2 || transform.position.x > GM.WIDTH / 2)
-        {
-            transform.position = new Vector2(transform.position.x - Mathf.Sign(transform.position.x)*0.1f, transform.position.y);
-            rb.velocity = new Vector2(-rb.velocity.x, rb.velocity.y);
-        }
-            
-        if (transform.position.y < -GM.HEIGHT / 2 || transform.position.y > GM.HEIGHT / 2)
-        {
-            rb.velocity = new Vector2(rb.velocity.x, -rb.velocity.y);
-            transform.position = new Vector2(transform.position.x, transform.position.y - Mathf.Sign(transform.position.y)*0.1f);
-        }
-            
-    }*/
 
     void SetRandomVelocity()
     {
@@ -63,12 +31,6 @@ public class Ball : MonoBehaviour
         rb.velocity = dir * GM.ballVelocity;
     }
 
-    public void SetParticularVelocity(Vector2 dir)
-    {
-        dir.Normalize();
-        dir *= GM.ballVelocity;
-        rb.velocity = dir;
-    }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -76,23 +38,26 @@ public class Ball : MonoBehaviour
         CameraAnim.SetTrigger("Shake");
         GetComponent<Animator>().SetTrigger("Hit");       
     }
-    private void Update() {
-        //testBounds();
-        ControlDirectyion();
-        if (rb.velocity.x <= 2 && rb.velocity.x >= -2) 
-        {
-            if (rb.velocity.x > 0)
-                rb.velocity = new Vector2(rb.velocity.x + 8, rb.velocity.y);
-            else
-                rb.velocity = new Vector2(rb.velocity.x - 8, rb.velocity.y);
-        }
-        if (rb.velocity.y <= 2 && rb.velocity.y >= -2)
-        {
-            if (rb.velocity.y > 0)
-                rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y+5);
-            else
-                rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y-5);
-        }
+
+    void setAngle()
+    {
         speed = rb.velocity;
+        float angle = Vector2.Angle(speed.x>0?Vector2.right:Vector2.left, speed);
+        if(angle > 0)
+            angle = Mathf.Clamp(angle, GM.degreeMin, GM.degreeMax);
+        else
+            angle = Mathf.Clamp(angle, -GM.degreeMax, -GM.degreeMin);
+        //Debug.Log(Mathf.Cos(angle*Mathf.Deg2Rad) + " " + Mathf.Sin(angle * Mathf.Deg2Rad));
+        speed.x = Mathf.Sign(speed.x) * Mathf.Cos(angle*Mathf.Deg2Rad);
+        speed.y = Mathf.Sign(speed.y) * Mathf.Sin(angle * Mathf.Deg2Rad);
+        speed *= GM.ballVelocity;
+        rb.velocity = speed;
+        
+
+    }
+    private void Update() {
+        ControlDirection();
+        setAngle();
+
     }
 }

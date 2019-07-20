@@ -12,6 +12,7 @@ public class PlayerMove : MonoBehaviour
     GameManager GM;
     float maxSizeY1;
     float maxSizeY2;
+   // public bool pong;
 
 
     private void Awake()
@@ -33,6 +34,10 @@ public class PlayerMove : MonoBehaviour
             rb.AddForce(force * Vector2.down);
         }
         rb.velocity=new Vector2(0,Mathf.Clamp(rb.velocity.y, -13, 13));
+        //if (pong == false)
+        //{
+        //    transform.position = new Vector2(transform.position.x, Mathf.Clamp(transform.position.y, -4, 4));
+        //}
     }
 
     void GetBlockSizeY()

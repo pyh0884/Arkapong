@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class ShieldBlocks : Blocks
 {
+    public override void SetShield()
+    {
+        return;
+    }
 
     private void Start() {
         for (float i = -1; i <= 1; i++)

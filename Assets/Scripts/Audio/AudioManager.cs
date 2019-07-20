@@ -8,7 +8,6 @@ public class AudioManager : MonoBehaviour
     
     public Audio[] audios;
     public static AudioManager cur;
-    private Scene scene;
     void Awake()
     {
 
@@ -37,12 +36,7 @@ public class AudioManager : MonoBehaviour
 
         void Start()
     {
-        if (scene.name!= "_Menu"&&scene.name!="Win")
-        Play("BGM");
-        Play("PlayerRun");
-        Play("BossRun");
-        Play("BossCharge");
-
+            Play("Main Theme");
     }
     public void Mute(string name)
     {
@@ -70,8 +64,8 @@ public class AudioManager : MonoBehaviour
 
     public void Play(string name)
     {
-        
-        Audio s= Array.Find(audios, sound => sound.name == name);
+
+        Audio s = Array.Find(audios, sound => sound.name == name);
         if (s == null)
         {
             //Debug.Log(name + "没找到啊");

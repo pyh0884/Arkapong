@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class EnemyMode : ModeManager
 {
+    float time;
 
     public void CheckPlayer()
     {
@@ -11,17 +12,23 @@ public class EnemyMode : ModeManager
         if (num == 0)
         {
             FindObjectOfType<AudioManager>().Play("Winning BGM");
-            SetWin(false);
+            SetWin(true);
         }
         num = player2.transform.Find("Blocks").transform.childCount;
         if (num == 0)
         {
             FindObjectOfType<AudioManager>().Play("Winning BGM");
-            SetWin(true);
+            SetWin(false);
         }    
     }
-    
+
+    private void Awake()
+    {
+        time = Time.time;
+    }
+
     private void FixedUpdate() {
-        CheckPlayer();
+        //if(Time.time - time > 2f)
+            CheckPlayer();
     }
 }

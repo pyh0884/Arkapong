@@ -4,6 +4,7 @@ public class NumberCheckerController : MonoBehaviour/*数量检查器控制器*/
     public int[] remainedNumber;//砖块剩余数量
     public GameObject[] numberPosition;//数量显示的位置
     public GameObject[] functionShow;//砖块功能展示
+    public GameObject but;
 
     private void Update()//每帧更新的部分
     {
@@ -31,18 +32,20 @@ public class NumberCheckerController : MonoBehaviour/*数量检查器控制器*/
                     break;
             }
         }
-        //Debug.Log(BuildFinish());
+        BuildFinish();
     }
 
-    public bool BuildFinish()//是否建造完毕
+    public void BuildFinish()//是否建造完毕
     {
         foreach (var item in remainedNumber)
         {
             if(item != 0)
             {
-                return false;
+                return;
             }
         }
-        return true;
+        but.SetActive(true);
     }
+
+
 }

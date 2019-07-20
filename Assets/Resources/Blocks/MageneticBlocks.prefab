@@ -13,7 +13,8 @@ GameObject:
   - component: {fileID: 2566141253508948917}
   - component: {fileID: 2566141253508948916}
   - component: {fileID: 5461114404039110734}
-  m_Layer: 0
+  - component: {fileID: 8492802946018341224}
+  m_Layer: 9
   m_Name: MageneticBlocks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -71,7 +72,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 3
   m_Sprite: {fileID: -924632438748215808, guid: 7d4befa8c842a2447ab6ecb0f48bd1ea,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -144,6 +145,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroying: 0
+--- !u!95 &8492802946018341224
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2566141253508948912}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4a354919652794548911efb20133f48b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &2566141253807101915
 GameObject:
   m_ObjectHideFlags: 0
@@ -154,7 +174,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2566141253807101916}
   - component: {fileID: 2566141253807101917}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: "\u666E\u901A\u5757\u513F\u548C\u5149\u5708_1 (2)"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
