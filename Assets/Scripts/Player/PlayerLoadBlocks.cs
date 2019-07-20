@@ -27,7 +27,7 @@ public class PlayerLoadBlocks : MonoBehaviour
 
     void loadBlocks()
     {
-        Debug.Log(GM.PlayerPos);
+        //Debug.Log(GM.PlayerPos);
         transform.position = new Vector3((right ? 1 : -1) * GM.PlayerPos, 0, 0);
         int[,] BlockDic = LC.blocksArray;
         int col, row;

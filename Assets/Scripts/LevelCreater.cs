@@ -37,7 +37,7 @@ public class LevelCreater : MonoBehaviour
             blocksArray[posD[i, 0], posD[i, 1]] = BlockType[i];
             blocksArray[posD[i, 0] + height, width - posD[i, 1] -1] = BlockType[i];
         }
-        Debug.Log(blocksArray);
+        //Debug.Log(blocksArray);
 
     }
 
