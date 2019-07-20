@@ -19,7 +19,7 @@ public class ShieldBlocks : Blocks
                 Collider2D[] Besides = Physics2D.OverlapPointAll(dir);
                 foreach (var item in Besides)
                 {
-                    if (item.GetComponent<Blocks>() != null)
+                    if ((item.GetComponent<Blocks>() != null)&&(item.GetComponent<ExplodeBlocks>() == null) && (item.GetComponent<MagneticBlocks>() == null) && (item.GetComponent<UnbreakableBlock>() == null))
                     {
                         item.GetComponent<Blocks>().SetShield();
                     }
